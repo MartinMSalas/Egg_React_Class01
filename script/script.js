@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
     mensajeElement.textContent = "El enlace entre HTML y JavaScript en el header ha sido exitoso!";
   });
   
-  var name = prompt("Hola, ingresa tu nombre");
+  /*
+  var fullName = prompt("Hola, ingresa tu nombre");
   var yearOfBirth = prompt("Hola, ingresa tu año de nacimiento");
   var monthOfBirth = prompt("Hola, ingresa tu mes de nacimiento");
   var dayOfBirth = prompt("Hola, ingresa tu dia de nacimiento");
@@ -28,4 +29,41 @@ document.addEventListener("DOMContentLoaded", function() {
       age--;
   }
   
-  console.log(`Hola ${name}, tu edad es ${age} años.`);
+  console.log(`Hola ${fullName}, tu edad es ${age} años.`);
+  alert(`Hola ${fullName}, tu edad es ${age} años.`);
+*/
+
+  // Secrets Try
+  function tryDiscountPassword() {
+    var numberOfTry = 0;
+    let foundPassword = false;
+    const secretDiscountPassword = "martin";
+    while (numberOfTry < 5) {
+      var discountPassword = prompt("Ingrese la contraseña para obtener el descuento");
+      if (discountPassword === secretDiscountPassword) {
+        foundPassword = true;
+        break;
+      } else {
+        numberOfTry++;
+      }
+    }
+    if(!foundPassword) {
+      alert("Lo sentimos, no puedes obtener el descuento");
+    } else {
+    alert("Felicitaciones, obtuviste el descuento!");
+    }
+  }
+  function moneyChange() {
+    var amount = prompt("Ingrese la cantidad de pesos a cambiar");
+    var rate = prompt("Ingrese el tipo de cambio");
+    var result = (amount / rate).toFixed(2);
+    alert(`El resultado es ${result} Hermosos y verdes dolares`);
+  }
+  function wordSize() {
+    var word = prompt("Ingrese una palabra");
+    var size = word.length;
+    alert(`La palabra ${word} tiene ${size} caracteres`);
+  }
+
+
+
